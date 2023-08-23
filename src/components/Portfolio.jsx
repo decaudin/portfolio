@@ -138,7 +138,7 @@ const Portfolio = () => {
         <div className="portfolio">
             <h2>Mon Portfolio</h2>
             <p className="portfolioDescription">
-                Vous retrouverez ici les projets que j'ai réalisés au cours de ma formation :
+                Vous retrouverez ici les projets que j'ai réalisé au cours de ma formation :
             </p>
             <div className="imageProject">
                 {projects.map((project, index) => (
