@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Banner.scss";
-import header_img from "../assets/header_img.webp";
+import banner_img from "../assets/banner_img.webp";
 
 
 const Banner = () => {
@@ -20,7 +20,7 @@ const Banner = () => {
   
     return (
       <div className={`banner ${animationClass}`}>
-        <img className="headerImg" src={header_img} alt="développeur web" />
+        <img className="bannerImg" src={banner_img} alt="développeur web" />
         <div className="description">
           <h2>Bonjour et bienvenue sur mon espace !</h2>
           <p>Venez y découvrir mes projets et ma passion pour la création de contenus web modernes et attrayants.</p>
