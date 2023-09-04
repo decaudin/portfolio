@@ -1,23 +1,27 @@
+@import 'Mixin.scss';
+
 .header {
-    display: flex;
+    @include contact-common-style;
+    @include header-footer-common-style;
     justify-content: space-between;
-    margin: auto;
-    width: 97%;
-    background-color: blue;
-    border-radius: 20px;
-    box-shadow: 6px 6px 8px rgb(207, 207, 207);
     .title {
-        color: white;
         font-size: 20px;
-        width: 36%;
+        width: 37%;
         margin-left: 10px;
         h1 {
             font-weight: normal;
         }
+        h2 {
+            letter-spacing: 9px;
+            font-size: 18px;
+            margin-top: -15px;
+            margin-left: 50px;
+            font-weight: bold;
+            color: #4FFF19;
+        }
     }
     .navbar {
-        width: 64%;
-        color: white;
+        width: 62%;
         font-size: 33px;
         ul {
             list-style: none;
@@ -29,7 +33,7 @@
                 transition: color 0.3s ease-in-out;
                 .navItemContent{
                     &:hover {
-                    color: rgb(71, 255, 47);
+                    color: #4FFF19;
                     }  
                 }
                 
@@ -38,15 +42,18 @@
     }
 }
 
-@media screen and (max-width: 1110px) {
+@media screen and (max-width: 1185px) {
     .header {
         flex-direction: column;
         .title {
             margin: auto;
             width: 100%;
-            margin-bottom: 10px;
-            h1 {
+            margin-bottom: -20px;
+            h1, h2 {
                 text-align: center;
+            }
+            h2 {
+                margin-left: 0px;
             }
         }
         .navbar {
@@ -71,10 +78,27 @@
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 440px) {
     .header {
+        .title {
+            h1 {
+                font-size: 30px;
+            }
+            h2 {
+                font-size: 16px;
+                letter-spacing: 7px;
+            }
+        }
         .navbar {
             font-size: 18px;
+        }
+    }
+}
+
+@media screen and (max-width: 365px) {
+    .header {
+        .navbar {
+            font-size: 16px;
         }
     }
 }

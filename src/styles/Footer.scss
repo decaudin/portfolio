@@ -1,11 +1,9 @@
+@import 'Mixin.scss';
+
 .footer {
+    @include header-footer-common-style;
     display: flex;
     margin: auto;
-    width: 97%;
-    background-color: blue;
-    border-radius: 20px;
-    box-shadow: 6px 6px 8px rgb(207, 207, 207);
-    color: white;
     flex-direction: column;
     margin-top: 50px;
     height: 110px;
@@ -14,9 +12,7 @@
         font-size: 20px;
     }
     .contactLink {
-        display: flex;
-        justify-content: space-evenly;
-        margin: auto;
+        @include contact-common-style;
         width: 20%;
         a {
             img {

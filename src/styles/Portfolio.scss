@@ -1,8 +1,8 @@
+@import 'Mixin.scss';
+
 .portfolio {
     h2 {
-        text-align: center;
-        font-size: 50px;
-        font-weight: normal;
+        @include h2-common-style;
     }
     .portfolioDescription {
         text-align: center;
@@ -37,14 +37,8 @@
             }
             
             .overlay {
+                @include overlay-common-style;
                 position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 opacity: 0;
                 transition: opacity 0.3s;
                 
@@ -93,14 +87,8 @@
 }
 
 .modalOverlay {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include overlay-common-style;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
 }
@@ -135,16 +123,11 @@
         }
 
         .buttonConsultation {
-
-            display: flex;
-            justify-content: space-evenly;
+            @include contact-common-style;
             width: 60%;
-            margin: auto;
-
             .codeLink {
+                @include codeLink-common-style;
                 text-decoration: none;
-                background-color: #e0b87f;
-                color: white;
                 padding: 10px 20px;
                 border-radius: 25px;
                 display: inline-block;
@@ -153,24 +136,15 @@
                 text-align: left;
                 position: relative; /* Nécessaire pour positionner les éléments enfants */
                 overflow: hidden; /* Cacher le contenu qui déborde */
-                transition: transform 0.3s ease-in-out;
             }
         
             .codeLink:before,
             .codeLink:after {
+                @include overlay-common-style;
+                @include codeLink-common-style;
                 content: "Cliquez ici !";
                 position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: #e0b87f;
-                color: #fff;
                 transform: translateY(100%); /* Déplacer la face arrière hors de vue */
-                transition: transform 0.3s ease-in-out;
             }
         
             .codeLink:hover {

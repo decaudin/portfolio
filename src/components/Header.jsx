@@ -6,7 +6,8 @@ const Header = ({ onClickHome }) => {
     return (
         <div className="header">
             <div className="title">
-                <h1>DECAUDIN XAVIER</h1>
+                <h1>DÉVELOPPEUR WEB</h1>
+                <h2>DECAUDIN XAVIER</h2>
             </div>
             <nav className="navbar">
                 <ul>

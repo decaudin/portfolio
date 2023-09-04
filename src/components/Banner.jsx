@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "../styles/Banner.scss";
 import banner_img from "../assets/banner_img.webp";
 
-
 const Banner = () => {
     const [animationClass, setAnimationClass] = useState("");
   
@@ -22,7 +21,7 @@ const Banner = () => {
       <div className={`banner ${animationClass}`}>
         <img className="bannerImg" src={banner_img} alt="développeur web" />
         <div className="description">
-          <h2>Bonjour et bienvenue sur mon espace !</h2>
+          <h2>Bonjour et bienvenue sur mon site portfolio !</h2>
           <p>Venez y découvrir mes projets et ma passion pour la création de contenus web modernes et attrayants.</p>
           <p>Désireux de développer des interfaces de qualité offrant une expérience utilisateur optimale, j'espère que mon travail vous plaira.</p>
         </div>

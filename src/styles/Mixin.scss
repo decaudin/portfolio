@@ -1,0 +1,44 @@
+@mixin h2-common-style {
+  font-size: 50px;
+  font-weight: normal;
+  text-align: center;
+}
+
+@mixin contact-common-style {
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+}
+
+@mixin link-common-style {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  &:hover {
+    color: #0000ff;
+  }
+}
+
+@mixin header-footer-common-style {
+  width: 97%;
+  background-color: #0000ff;
+  color: white;
+  border-radius: 20px;
+  box-shadow: 6px 6px 8px rgb(207, 207, 207);
+}
+
+@mixin overlay-common-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+@mixin codeLink-common-style {
+  background-color: #e0b87f;
+  color: #fff;
+  transition: transform 0.3s ease-in-out;
+}

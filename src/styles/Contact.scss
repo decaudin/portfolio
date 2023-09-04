@@ -1,8 +1,8 @@
+@import 'Mixin.scss';
+
 .contact {
     h2 {
-        text-align: center;
-        font-size: 50px;
-        font-weight: normal;
+        @include h2-common-style;
         margin-top: 80px;
     }
 
@@ -13,29 +13,20 @@
     }
 
     .contactEmail {
-        display: flex;
-        justify-content: space-evenly;
+        @include contact-common-style;
         width: 23.5%;
-        margin: auto;
         margin-bottom: 30px;
         .iconeMail {
             width: 25px;
         }
-        .mailTo { 
-            text-decoration: none;
-            color: black;
-            font-size: 20px;
-            &:hover {
-                color: blue;
-            }          
+        .mailTo {
+            @include link-common-style;       
         }
     }
     
     .contactPhone {
-        display: flex;
-        justify-content: space-evenly;
+        @include contact-common-style;
         width: 16%;
-        margin: auto;
         margin-bottom: 15px;
         .iconePhone {
             width: 39px;
@@ -47,23 +38,16 @@
     }
 
     .localisation {
-        display: flex;
-        margin: auto;
+        @include contact-common-style;
         width: 11%;
-        justify-content: space-evenly;
         align-items: center;
         .iconeLocalisation {
             width: 39px;
             margin-bottom: 10px;   
         }
         .toLocalisation {
-            text-decoration: none;
-            font-size: 20px;
-            color: black;
-                &:hover {
-                    color: blue;
-                }     
-        }
+            @include link-common-style;
+        }  
     }
 }
 

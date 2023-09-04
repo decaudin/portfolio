@@ -1,12 +1,11 @@
+@import 'Mixin.scss';
+
 .skills {
     display: flex;
     flex-direction: column;
-    background-color: white;
     margin-bottom: 100px;
     h2 {
-        text-align: center;
-        font-size: 50px;
-        font-weight: normal;
+        @include h2-common-style;
     }
     ul {
         list-style: none;
@@ -122,6 +121,16 @@
             img {
                 width: 60%;
                 margin: auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .skills {
+        ul {
+            li {
+                width: 80%;
             }
         }
     }
